@@ -16,26 +16,24 @@ screen.setup(width=800, height=600)
 t = turtle.Turtle()
 t.speed(0)
 t.pensize(3)
-t.forward(50)
-t.right(50)
+t.penup()
 
 color= ["red", "blue", "green", "black"]
 
 
 
 for i in range(50):
+    x = -250 + i * 10
+    y= i
+    
     t.pencolor(random.choice(color))
-    t.forward(100)
-    t.right(100)
+    t.goto(x, y)
+    t.pendown()
+    t.circle(50)
+    t.penup()
     
 
-t.penup()
-
-t.goto(random.randint(-100, 100), random.randint(-100, 100))
-
-t.pendown()
-
-r= random.randint(10, 20)
+r= random.randint(10, 50)
 t.circle(r)
 
 turtle.done()

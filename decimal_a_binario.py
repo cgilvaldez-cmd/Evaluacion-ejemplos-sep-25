@@ -9,37 +9,16 @@ import math
 
 print('\n\nConverir 1024 a código binario\n\n')
 
-b= 1024%2
-print(b)
+decimal=1024
+binario = ''
 
-b= 512%2
-print(b)
+if decimal == 0:
+    binario = '0'
 
-b= 256%2
-print(b)
+else:
+    while decimal > 0:
+        residual = decimal % 2
+        binario = str(residual) + binario
+        decimal = decimal // 2
 
-b= 128%2
-print(b)
-
-b= 64%2
-print(b)
-
-b= 32%2
-print(b)
-
-b= 16%2
-print(b)
-
-b= 8%2
-print(b)
-
-b= 4%2
-print(b)
-
-b= 2%2
-print(b)
-
-b= 1%2
-print(b)
-
-print('\n\nEl codigo binario de 1024 es 1000000000.\n\n')
+print('El numero binario de 1024 es', binario)
